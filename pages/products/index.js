@@ -7,7 +7,7 @@ import { Context } from "../../context/AppProvider";
 export default function ProductList() {
   //
   const { state } = useContext(Context);
-  console.log(state)
+  console.log('Hello from products! Heres the state I have from context ---> ',state)
   const input = useRef("");
   const router = useRouter();
   //
