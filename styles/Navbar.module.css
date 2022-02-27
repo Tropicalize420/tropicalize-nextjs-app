@@ -1,0 +1,13 @@
+.navDiv {
+  display: flex;
+  background-color: blueviolet;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.navUl {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
