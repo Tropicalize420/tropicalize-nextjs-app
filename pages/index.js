@@ -3,13 +3,15 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useContext, useEffect } from "react";
 import { Context } from "../context/AppProvider";
+import axios from "axios";
 //
 export default function Home({ res }) {
   //
   const { state, getProducts } = useContext(Context);
   useEffect(() => {
-    getProducts();
+    getProducts(res);
   }, []);
+  //
   console.log("State ---> ", state);
   console.log("RES ---> ", res);
   //
@@ -22,11 +24,21 @@ export default function Home({ res }) {
 }
 
 export async function getServerSideProps() {
-  // const req = await fetch(
-  //   `https://api.domainsdb.info/v1/domains/search?limit=50&domain=${params.name}&country=us`
-  // );
+  //
+  //   .get(`${process.env.REACT_APP_API_HOST}/products/all`, {
   // const data = await req.json();
-  const data = "Nothing here yet";
+  const data = await axios
+    .get("http://localhost:5005/api/products/all", {
+      withCredentials: true,
+    })
+    .then((response) => {
+      console.log("Api Response From Context ---> ", response);
+      return [...response.data.products];
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  //
   return {
     props: { res: data },
   };

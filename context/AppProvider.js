@@ -46,25 +46,12 @@ const cleanCart = (dispatch) => {
 };
 //
 const getProducts = (dispatch) => {
-  return async () => {
-    //
-    const data = await axios
-      //   .get(`${process.env.REACT_APP_API_HOST}/products/all`, {
-      .get("http://localhost:5005/api/products/all", {
-        withCredentials: true,
-      })
-      .then((response) => {
-        console.log("Api Response From Context ---> ", response);
-        return [...response.data.products];
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    //
+  return async (prods) => {
+    //  
     try {
       dispatch({
         type: "get_products",
-        payload: data,
+        payload: prods,
       });
     } catch (err) {
       console.log("Error heree ", err);
@@ -73,12 +60,12 @@ const getProducts = (dispatch) => {
 };
 //
 const generateCartFromStorage = (dispatch) => {
-  return async () => {
+  return async (cart) => {
     //
     try {
       dispatch({
         type: "get_cart",
-        payload: data,
+        payload: cart,
       });
     } catch (err) {
       dispatch({
