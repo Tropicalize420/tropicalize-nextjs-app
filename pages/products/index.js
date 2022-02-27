@@ -1,20 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import { useRouter } from "next/router";
 import { Input, Button, Header, Icon, Segment } from "semantic-ui-react";
-import styles from "../../styles/Domains.module.css"; 
+import styles from "../../styles/Products.module.css";
+import { Context } from "../../context/AppProvider";
 //
-export default function  DomainList() {
+export default function ProductList() {
   //
+  const { state } = useContext(Context);
+  console.log(state)
   const input = useRef("");
   const router = useRouter();
   //
   return (
     <div className={styles.container}>
       <Header as="h2">
-        <Icon name="settings" />
+        <Icon name="search" style={{ backgroundColor: '#FF4C9D"' }} />
         <Header.Content>
           Search
-          <Header.Subheader>For Domains</Header.Subheader>
+          <Header.Subheader>For Products</Header.Subheader>
         </Header.Content>
       </Header>
 
@@ -31,7 +34,8 @@ export default function  DomainList() {
         // fluid
         style={{
           margin: "1rem 0",
-          backgroundColor: "#FFBD59",
+          backgroundColor: "#FF4C9D",
+          color: "white",
           maxWidth: "50%",
         }}
         onClick={() => {

@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh) !important;
+  padding: 1rem;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ),
+    url("../public/tropi.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 60vh;
+    max-height: 400px; */
+}
+
+.img {
+  /* background-image: url('../public/1.png')!important;
+    background-position:end;
+    background-repeat:no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+    max-height: 400px; */
+}
