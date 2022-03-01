@@ -19,18 +19,18 @@
     max-height: 400px; */
 } 
 
-.product_screen {
+.productScreen {
   display: flex;
   flex-direction: row;
   background: white; /* linear-gradient(180deg, black, rgba(252, 77, 158, 1)); */
   width: 100vw;
   justify-content: center;
 }
-.mobile-hidden {
+.mobileHidden {
   display: none;
 }
 
-.products_container {
+.productsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,14 +38,14 @@
   max-width: 100%;
 }
 
-.products_div {
+.productsDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-.product_card {
+.productCard {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(240, 46, 170, 0.4);
@@ -60,7 +60,7 @@
     rgba(240, 46, 170, 0.05) 25px 25px;*/
 }
 
-.product_btn {
+.productBtn {
   padding: 8px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -72,13 +72,13 @@
   background-color: rgb(252, 77, 158);
 }
 
-.product_card > div {
+.productCard > div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.product_img {
+.productImg {
   height: 240px;
 }
 
@@ -101,33 +101,33 @@
 }
 
 @media (min-width: 800px) {
-  .mobile-hidden {
+  .mobileHidden {
     display: flex;
   }
-  .desktop-scrollable {
-    max-height: 30vw;
+  .desktopScrollable {
+    max-height: 80vh;
     overflow-y: scroll;
     border-color: 1px solid rgba(240, 46, 170, 0.4);
     width: 45vw;
   }
-  .product_card {
+  .productCard {
     width: 40vw;
   }
-  .product_screen {
+  .productScreen {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    /* height: 100vh; */
     width: 100vw;
   }
-  .figure-container {
+  .figureContainer {
     padding-bottom: 16vh;
     animation: 2s linear 3s infinite mymove;
   }
-  .figure-container > img {
+  .figureContainer > img {
     /*  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px !important; */
   }
-  .product_btn {
+  .productBtn {
     padding: 8px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -142,7 +142,7 @@
     outline: none;
   }
 
-  .product_btn:hover {
+  .productBtn:hover {
     background-color: rgb(252, 77, 158);
     box-shadow: 0px 15px 20px rgba(252, 77, 158, 0.5);
     color: #000;

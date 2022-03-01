@@ -55,8 +55,8 @@ export default function ProductList({ res }) {
   if (state.products !== undefined) {
     //&& state.cart !== undefined
     return (
-      <div className={styles.product_screen}>
-        <div className={`${styles.figure_container} ${styles.mobile_hidden}`}>
+      <div className={styles.productScreen}>
+        <div className={`${styles.figureContainer} ${styles.mobileHidden}`}>
           <Image
             alt="Img "
             src="https://res.cloudinary.com/alecos008/image/upload/v1642968688/Logo_copy_tc63hp.png"
@@ -64,10 +64,10 @@ export default function ProductList({ res }) {
           />
         </div>
 
-        <div className={[styles.products_container, styles.desktop_scrollable]}>
+        <div className={`${styles.productsContainer + " " + styles.desktopScrollable}`}>
           {state.products.map((product) => {
             return (
-              <div className={styles.product_card} key={product._id}>
+              <div className={styles.productCard} key={product._id}>
                 <h2>{product.name}</h2>
                 <div>
                   <img
@@ -78,7 +78,7 @@ export default function ProductList({ res }) {
                 </div>
                 <button
                   // onClick={() => addOne(state.cart, product.type)}
-                  className={styles.product_btn}
+                  className={styles.productBtn}
                 >
                   {/* {state.cart[product.type].quantity > 0
                     ? "Item added - Select Quantity in Cart"
