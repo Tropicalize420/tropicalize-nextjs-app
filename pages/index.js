@@ -11,17 +11,17 @@ export default function Home() {
   console.log(state);
   //
   return (
-    <div className={styles.main_container}>
-      <div className={styles.container_div}>
+    <div className={styles.mainContainer}>
+      <div className={styles.containerDiv}>
         <div className={styles.wrapper}>
           <section className={styles.section}>
-            <Image
+            <img
               src={Tropi}
               alt="Img Here"
               className={styles.foreground}
               // src="https://res.cloudinary.com/alecos008/image/upload/v1644504881/Web_Cover_kfhrww.png"
             />
-            <Image
+            <img
               src={Buildings}
               alt="Img Here"
               className={styles.background}

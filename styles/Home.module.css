@@ -118,7 +118,7 @@
 
 /* Previous CSS */
 
-.main_container {
+.mainContainer {
   display: flex;
   flex-direction: column;
   /* padding: 1rem; */
@@ -127,7 +127,7 @@
   min-width: 100vw;
 }
 
-.container_div {
+.containerDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
