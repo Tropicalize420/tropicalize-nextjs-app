@@ -1,3 +1,8 @@
+.nav{
+  background-color:transparent;
+  padding: 1rem;
+}
+
 .navDiv {
   display: flex;
   background-color: rgb(0, 0, 0);
@@ -15,3 +20,7 @@
 .navUl > li {
   color: rgb(255, 255, 255);
 }
+
+/* a.item:hover{
+  color:rgb(252, 77, 158);
+} */
