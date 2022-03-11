@@ -129,11 +129,13 @@
 
 .containerDiv {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: transparent;
-  /* min-height: 50vh; */
   width: 100%;
+  min-height: 700px;
+  margin:  2rem 0;
+  background-color: aqua;
 }
 
 .wrapper {

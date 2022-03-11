@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import { useContext } from "react";
 import { Context } from "../context/AppProvider";
 import Buildings from "../public/elementscrop.png";
-import Tropi from "../public/tropi_city.png";
+import Tropi from "../public/tropi.png";
 import Image from "next/image";
 //
 export default function Home() {
@@ -12,8 +12,9 @@ export default function Home() {
   //
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.containerDiv}>
-        <div className={styles.wrapper}>
+      {/* Parallax Code Below */}
+      {/* <div className={styles.containerDiv}> */}
+      {/* <div className={styles.wrapper}>
           <section className={styles.section}>
             <img
               src={Tropi}
@@ -24,7 +25,7 @@ export default function Home() {
             <img
               src={Buildings}
               alt="Img Here"
-              className={styles.background}
+              className={styles.background} 
               style={{ minHeight: "150vh" }}
             />
 
@@ -71,8 +72,28 @@ export default function Home() {
             pariatur reprehenderit accusantium labore obcaecati, recusandae
             saepe?
           </p>
-        </article>
+        </article> */}
+      {/* </div> */}
+      <div className={styles.containerDiv}>
+        <div>
+          <div
+            className={styles.card}
+            style={{minWidth:'50vw', minHeight:'50vh'}}
+          >
+            Welcome to Tropicalize
+          </div>
+        </div>
+        <div>
+          <Image
+            // loader={myLoader}
+            src="/tropi.png"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </div>
       </div>
+      <div className={styles.containerDiv}></div>
     </div>
   );
 }
