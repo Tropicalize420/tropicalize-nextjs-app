@@ -113,7 +113,7 @@ export async function getServerSideProps() {
   //   .get(`${process.env.REACT_APP_API_HOST}/products/all`, {
   // const data = await req.json();
   const data = await axios
-    .get("http://localhost:5005/api/products/all", {
+    .get("https://tropicalize.herokuapp.com/api/products/all", {
       withCredentials: true,
     })
     .then((response) => {
