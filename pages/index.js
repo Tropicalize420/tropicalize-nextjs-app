@@ -80,7 +80,7 @@ export default function Home() {
             className={styles.card}
             style={{minWidth:'50vw', minHeight:'50vh'}}
           >
-            Welcome to Tropicalize
+            Welcome to Tropicalize  
           </div>
         </div>
         <div>
