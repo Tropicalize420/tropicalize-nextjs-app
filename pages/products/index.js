@@ -117,11 +117,11 @@ export async function getServerSideProps() {
       withCredentials: true,
     })
     .then((response) => {
-      console.log("Api Response From Context ---> ", response);
-      return [...response.data.products];
+      // console.log("Api Response From Context ---> ", response);
+      return [...response.data.data];
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
   //
   return {
